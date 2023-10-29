@@ -26,9 +26,9 @@ public class Main {
 
         //task3
         int year = 2021;
-        if (year % 400 == 0) {
+        if (year >= 1584 && year % 400 == 0) {
                 System.out.println(year + " - високосный год");
-        } else if (year % 4 == 0 && year % 100 != 0) {
+        } else if (year >= 1584 && year % 4 == 0 && year % 100 != 0) {
                 System.out.println(year + " - високосный год");
         } else {
                 System.out.println(year + " - не високосный год");
@@ -45,7 +45,7 @@ public class Main {
         } else if (deliveryDistance >= 60 && deliveryDistance < 100) {
             deliveryTime = deliveryTime + 2;
             System.out.println("Потребуется дней: " + deliveryTime);
-        } else {
+        } else if (deliveryDistance >= 100){
             deliveryTime = deliveryTime + 3;
             System.out.println("Потребуется дней: " + deliveryTime);
         }
